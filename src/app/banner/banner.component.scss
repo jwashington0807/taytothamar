@@ -1,0 +1,16 @@
+#bannerSection {
+    height:90px;
+    background-color: #3F3F3F;
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+#bannerTitle {
+    position: absolute;
+    width: 80%;
+    top: 0;
+    right: 0;
+    background-color: #A2A2A2;
+    min-height: 100%;
+}

@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+
+html{
+    min-height: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+    text-decoration: none; 
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+html, body {
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    min-height: 100%;
+    position: relative;
+}
+
+:host > * { display: block; }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+p {
+    margin: 0px;
+}
+
+a:visited {
+    color: #FFF;
+}
+
+.clearfix {
+    clear:both;
+}
+
+.hidden {
+    display: none;
+}
