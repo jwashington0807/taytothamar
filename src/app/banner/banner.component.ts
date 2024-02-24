@@ -8,4 +8,19 @@ import { Component } from '@angular/core';
 export class BannerComponent {
 
   public title = "";
+
+    // Local Variables
+    authenticated: boolean = false;
+    isMenuOpen = false;
+  
+    constructor() {
+
+    }
+    
+    ngOnInit() {
+    }
+  
+    toggleMenu(): void {
+      this.isMenuOpen = !this.isMenuOpen;
+    }
 }

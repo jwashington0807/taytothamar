@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { BannerComponent } from 'src/app/banner/banner.component';
 
 @Component({
   selector: 'app-portfolio',
@@ -8,7 +7,4 @@ import { BannerComponent } from 'src/app/banner/banner.component';
 })
 export class PortfolioComponent {
 
-  constructor() {
-    
-  }
 }

@@ -1,28 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { SocialComponent } from './social/social.component';
 import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
-import { PortfolioComponent } from './Pages/portfolio/portfolio.component';
-import { ContactComponent } from './Pages/contact/contact.component';
-import { ReferencesComponent } from './Pages/references/references.component';
-import { NotFoundComponent } from './Pages/not-found/not-found.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { ReferencesComponent } from './pages/references/references.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { HomeComponent } from './pages/home/home.component';
+import { PortfolioComponent } from './sections/portfolio/portfolio.component';
+import { IntroComponent } from './sections/intro/intro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    SocialComponent,
     BannerComponent,
     FooterComponent,
-    PortfolioComponent,
     ContactComponent,
     ReferencesComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HomeComponent,
+    PortfolioComponent,
+    IntroComponent
   ],
   imports: [
     BrowserModule,

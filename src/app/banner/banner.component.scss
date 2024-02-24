@@ -1,16 +1,117 @@
-#bannerSection {
-    height:90px;
-    background-color: #3F3F3F;
-    display: block;
-    position: relative;
+$menuBreakPoint: 600px;
+$menuHeight: 50px;
+
+.banner {
+    height: 90px;
     width: 100%;
+    position: relative;
+    display: block;
 }
 
-#bannerTitle {
-    position: absolute;
-    width: 80%;
-    top: 0;
-    right: 0;
-    background-color: #A2A2A2;
-    min-height: 100%;
+.banner-rows {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 50px;
+    white-space: nowrap;
 }
+
+.banner-primary {
+    background-color: none;
+    color: #fff;
+}
+
+// Logo
+.taylogo {
+    display: inline-block;
+    padding-top: 25px;
+    padding-left: 12px;
+    color: #EB5656;
+}
+
+// Navigation
+#taynav {
+
+    float: right; 
+
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .burger {
+        padding: 0 10px;
+        border-left: 1px solid #eee;
+        display: none;
+        cursor: pointer;
+
+        i {
+        color: #999;
+        line-height: $menuHeight;
+        }
+
+        @media (max-width: $menuBreakPoint) {
+            display: block; 
+        }
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: $menuBreakPoint) {
+            display: none;
+
+            &.is-open {
+                display: flex;
+                position: absolute;
+                top: 52px;
+                width: 200px;
+                background-color: #FFF;
+                flex-direction: column;
+            }
+        }
+
+        .menu-item {
+            padding: 10px 35px;
+            height: $menuHeight;
+            line-height: $menuHeight;
+            text-decoration: none;
+            display: block;
+            color: #EB5656;
+
+            @media (max-width: $menuBreakPoint) {
+                height: 100%;
+                line-height: 40px;
+                padding: 10px 0px;
+            }
+        }
+    }
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1000px) {
+    .taynav {display: none;}
+    .taynav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 1000px) {
+    .taynav.responsive {position: relative;}
+    .taynav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .taynav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }

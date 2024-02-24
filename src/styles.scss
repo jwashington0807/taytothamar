@@ -8,6 +8,7 @@ html{
 
 body {
     text-decoration: none; 
+    background-color: #242424;
     background-repeat: no-repeat;
     margin: 0;
 }
@@ -40,4 +41,18 @@ a:visited {
 
 .hidden {
     display: none;
+}
+
+// Section
+.section {
+    height: 650px;
+    width: 100%;
+    position: relative;
+    display: block;
+}
+
+.header {
+    height: 70px;
+    width: 385px;
+    margin-top: 10px;
 }
