@@ -1,28 +1,33 @@
+.section .intro {
+    min-height: 100%;
+}
+
 .intro {
-    background-color: none;
+    padding-top: 140px;
+
+    background: url("/assets/mainbackground.png") no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* IE */
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/main_bg_2.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/main_bg_2.jpg', sizingMethod='scale')";
 }
 
 .intro_container {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     padding-top: 35px;
 }
 
 .profilephoto {
-    width: 480px;
-    height: 460px;
+    width: 463px;
+    height: 576px;
 }
 
 .sectionwords {
-    width: 630px;
-    color: #868686;
-}
-
-.introverbiage {
-    padding-top: 40px;
-}
-
-.title {
-    height: 70px;
-    width: 600px;
+    width: 563px;
+    height: 322px;
 }

@@ -1,9 +1,8 @@
+<!-- Banner Section -->
 <div class="banner">
 
     <!-- Logo Section -->
-    <div class="taylogo">
-        <p>TAY2THAMAR</p>
-    </div>
+    <img class="taylogo" src="./assets/Tay2theMarAltLogo.png" alt="Tamar Logo">
 
     <!-- Navigation Menu -->
     <nav id="taynav">
@@ -12,13 +11,16 @@
                 <i class="material-icons"> {{ isMenuOpen ? "close" : "menu" }} </i>
             </li>
             <li class="menu" [class.is-open]="isMenuOpen">
-                <a class="menu-item" [routerLink]="'/'" (click)="toggleMenu()">Home</a>
-                <a class="menu-item" [routerLink]="'#portfolio'" (click)="toggleMenu()">Portfolio</a>
-                <a class="menu-item" [routerLink]="'#references'" (click)="toggleMenu()">References</a>
-                <a class="menu-item" [routerLink]="'/urltoresumefile'" (click)="toggleMenu()">Resume</a>
-                <a class="menu-item" [routerLink]="'contact'" (click)="toggleMenu()">Contact</a>
+                <a class="menu-item" [class.is-open]="isMenuOpen" [routerLink]="'/'" (click)="toggleMenu()">Home</a>
+                <a class="menu-item" [class.is-open]="isMenuOpen" [routerLink]="'#portfolio'" (click)="toggleMenu()">Portfolio</a>
+                <a class="menu-item" [class.is-open]="isMenuOpen" [routerLink]="'#references'" (click)="toggleMenu()">References</a>
+                <a class="menu-item" [class.is-open]="isMenuOpen" [routerLink]="'/urltoresumefile'" (click)="toggleMenu()">Resume</a>
+                <a class="menu-item" [class.is-open]="isMenuOpen" [routerLink]="'contact'" (click)="toggleMenu()">Contact</a>
             </li>
         </ul>
-    </nav>
 
+        <!-- Social Media links -->
+        <app-social></app-social>
+    </nav>
 </div>
+

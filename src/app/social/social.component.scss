@@ -1,0 +1,48 @@
+$menuBreakPoint: 955px;
+$menuHeight: 50px;
+
+.sociallinks {
+    position: relative;
+    display: block;
+    float: right;
+    height: 40px;
+    width: max-content;
+    z-index: 888;
+    padding-right: 50px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style-type: none;
+    }
+
+    @media (max-width: $menuBreakPoint) {
+
+        ul {
+            display: block;
+        }
+        
+        li {
+            display: block;
+        }
+
+        display: block;
+        width: 10px;
+        position: absolute;
+        top: 70px;
+        flex-direction: row;
+        right: 0%;
+        z-index: 999;
+        height: 600px;
+    }
+}
+
+.social {
+    width: 45px;
+    height: 45px;
+    text-decoration: none;
+    padding: 10px 10px;
+}
