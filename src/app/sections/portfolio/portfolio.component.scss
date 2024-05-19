@@ -6,3 +6,22 @@
     display: flex;
     justify-content: center;
 }
+
+.sectionlinks {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+.linkitem {
+    padding: 0px 10px;
+    display: inline-block;
+    /* height: 250px; */
+}
+
+.videolink {
+    width: 400px;
+    height: 225px;
+}
