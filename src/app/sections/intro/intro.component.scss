@@ -1,33 +1,32 @@
-.section .intro {
-    min-height: 100%;
+$menuBreakPoint: 955px;
+
+.section.intro {
+    min-height: 600px;
+    position: relative;
 }
 
 .intro {
-    padding-top: 140px;
-
-    background: url("/assets/mainbackground.png") no-repeat center center; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    /* IE */
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/main_bg_2.jpg', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/main_bg_2.jpg', sizingMethod='scale')";
-}
-
-.intro_container {
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding-top: 35px;
+    z-index: 2;
+    align-items: center;
+
+    @media (max-width: $menuBreakPoint) {
+        
+        flex-direction: column;
+    }
 }
 
-.profilephoto {
-    width: 463px;
-    height: 576px;
+img.profilephoto {
+    max-width: 100%;
+    max-height: 500px;
+    height: auto;
+    z-index: inherit;
 }
 
-.sectionwords {
-    width: 563px;
-    height: 322px;
+img.sectionwords {
+    max-width: 100%;
+    max-height: 375px;
+    height: auto;
+    z-index: inherit;
 }

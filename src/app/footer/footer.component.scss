@@ -1,7 +1,28 @@
 #footerSection {
-    display: block;
-    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100px;
     width: 100%;
-    background-color: #3F3F3F;
-    position: relative;
+    background-color: #000;
+}
+
+.footerIcon {
+    display: flex;
+}
+
+img.tamarcpyright {
+    justify-content: flex-start;
+    min-width: 50%;
+    order: 1;
+    object-fit: contain;
+    padding-left: 10px;
+}
+
+img.jtcpyright {
+    justify-content: flex-end;
+    min-width: 50%;
+    order: 2;
+    object-fit: contain;
+    padding-right: 10px;
 }

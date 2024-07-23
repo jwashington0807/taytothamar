@@ -1,69 +1,38 @@
 $menuBreakPoint: 955px;
-$menuHeight: 50px;
+$menuHeight: 3rem;
 
 .banner {
-    height: 140px;
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
     display: flex;
-    z-index: 888;
-}
-
-.banner-rows {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 50px;
-    white-space: nowrap;
-}
-
-.banner-primary {
-    background-color: none;
-    color: #fff;
-}
-
-.topbar {
-    display: block;
-}
-
-.bottombar {
-    display: block;
+    position: relative;
+    z-index: 2;
 }
 
 // Logo
 .taylogo {
     display: inline-block;
-    padding-left: 12px;
+    margin-left: 12px;
     color: #EB5656;
-    width: 327px;
-    height: 126px;
+    object-fit: cover;
 }
 
 // Navigation
 #taynav {
 
-    float: right; 
+    display: flex;
     font-family: "copperplate";
     font-weight: lighter;
-    font-size: 22px;
+    font-size: 1.5rem;
     min-height: 100%;
-    margin-left: auto;
-
-    ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+    flex-grow: 2;
+    justify-content: right;
 
     .burger {
         padding: 0 10px;
         display: none;
         cursor: pointer;
         padding-top: 30px;
+        float: right;
 
         i {
             color: #999;
@@ -78,7 +47,6 @@ $menuHeight: 50px;
     .menu {
         display: flex;
         align-items: center;
-        padding-top: 30px;
         transition: right 2s ease;
 
         @media (max-width: $menuBreakPoint) {
@@ -97,9 +65,9 @@ $menuHeight: 50px;
         }
 
         .menu-item {
-            padding: 10px 35px;
-            height: $menuHeight;
-            line-height: $menuHeight;
+            padding: 0px 35px;
+            height: 3rem;
+            line-height: 3rem;
             text-decoration: none;
             display: block;
             color: #EB5656;
