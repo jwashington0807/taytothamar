@@ -2,23 +2,27 @@
 <div class="banner">
 
     <!-- Logo Section -->
-    <img class="taylogo" src="./assets/Tay2theMarAltLogo.png" alt="Tamar Logo">
+    <div id="logo" class="tayicon-logo-render taysimple">
+        <a [routerLink]="'/'"><img class="tayicon taylogo" src="./assets/Tay2theMarAltLogo.png" alt="Tamar Logo"></a>
+    </div>
 
     <!-- Navigation Menu -->
     <nav id="taynav">
         <div class="burger" (click)="toggleMenu()">
             <i class="material-icons"> {{ isMenuOpen ? "close" : "menu" }} </i>
         </div>
-        <div class="menu" [class.is-open]="isMenuOpen">
-            <a class="menu-item" [class.is-open]="isMenuOpen" [routerLink]="'/'" (click)="toggleMenu()">Home</a>
-            <a class="menu-item" [class.is-open]="isMenuOpen" href="#portfolio" (click)="toggleMenu()">Portfolio</a>
-            <a class="menu-item" [class.is-open]="isMenuOpen" [routerLink]="'#references'" (click)="toggleMenu()">References</a>
-            <a class="menu-item" [class.is-open]="isMenuOpen" [routerLink]="'/urltoresumefile'" (click)="toggleMenu()">Resume</a>
-            <a class="menu-item" [class.is-open]="isMenuOpen" [routerLink]="'contact'" (click)="toggleMenu()">Contact</a>
-        </div>
+        <div class="menucontainer" [class.is-open]="isMenuOpen">
+            <div class="menu">
+                <a class="menu-item" [class.is-open]="isMenuOpen" [routerLink]="'/'" (click)="toggleMenu()">Home</a>
+                <a class="menu-item" [class.is-open]="isMenuOpen" href="#portfolio" (click)="toggleMenu()">Portfolio</a>
+                <a class="menu-item" [class.is-open]="isMenuOpen" [routerLink]="'#references'" (click)="toggleMenu()">References</a>
+                <a class="menu-item" [class.is-open]="isMenuOpen" [routerLink]="'/urltoresumefile'" (click)="toggleMenu()">Resume</a>
+                <a class="menu-item" [class.is-open]="isMenuOpen" [routerLink]="'contact'" (click)="toggleMenu()">Contact</a>
+            </div>
 
-        <!-- Social Media links -->
-        <app-social></app-social>
+            <!-- Social Media links -->
+            <app-social></app-social>
+        </div>
     </nav>
 </div>
 

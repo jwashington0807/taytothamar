@@ -1,11 +1,10 @@
-$menuBreakPoint: 955px;
+$menuBreakPoint: 960px;
 $menuHeight: 3rem;
 
 .banner {
     width: 100%;
     display: flex;
-    position: relative;
-    z-index: 2;
+    height: 100%;
 }
 
 // Logo
@@ -13,12 +12,32 @@ $menuHeight: 3rem;
     display: inline-block;
     margin-left: 12px;
     color: #EB5656;
-    object-fit: cover;
+    max-width: 450px;
+    width: 400px;
+    height: auto;
+
+    @media (max-width: 700px) {
+        width: 300px;
+    }
+
+    @media (max-width: 440px) {
+        width: 200px;
+    }
+}
+
+.tayicon-logo-render {
+    padding: 0;
+    align-items: center;
+    flex: none;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
 }
 
 // Navigation
 #taynav {
 
+    position: relative;
     display: flex;
     font-family: "copperplate";
     font-weight: lighter;
@@ -26,13 +45,23 @@ $menuHeight: 3rem;
     min-height: 100%;
     flex-grow: 2;
     justify-content: right;
+    z-index: 2;
+
+    @media (max-width: $menuBreakPoint) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 999;
+    }
 
     .burger {
         padding: 0 10px;
         display: none;
         cursor: pointer;
         padding-top: 30px;
-        float: right;
+        position: absolute;
+        top: 0;
+        right: 0;
 
         i {
             color: #999;
@@ -44,36 +73,49 @@ $menuHeight: 3rem;
         }
     }
 
-    .menu {
+    .menucontainer {
+
         display: flex;
         align-items: center;
-        transition: right 2s ease;
 
         @media (max-width: $menuBreakPoint) {
-            width: 300px;
-            position: absolute;
-            top: 70px;
+            top: 0;
+            right: 0;
+            margin-top: 65px;
             background-color: #000;
+            transition: width 1.6s ease;
+            overflow: hidden;
+            width: 0px;
+            align-items: flex-start;
             flex-direction: column;
-            right: -34%;
-            z-index: 999;
-            height: 600px;
 
             &.is-open {
-                right: 0%;
+                width: 300px;
             }
+        }
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+
+        @media (max-width: $menuBreakPoint) {
+            display: flex;
+            width: 300px;
+            flex-direction: column;
         }
 
         .menu-item {
-            padding: 0px 35px;
-            height: 3rem;
-            line-height: 3rem;
-            text-decoration: none;
             display: block;
+            text-decoration: none;
             color: #EB5656;
-
+            position: relative;
+            padding: 0 20px;
+            
             @media (max-width: 1260px) {
-                padding: 10px 30px;
+                //padding: 10px 30px;
             }
 
             @media (max-width: 1150px) {
@@ -81,11 +123,8 @@ $menuHeight: 3rem;
             }
 
             @media (max-width: $menuBreakPoint) {
-                height: 100%;
-                line-height: 40px;
-                padding: 10px 0px;
-                width: 100%;
-                text-align: center;
+                height: 3rem;
+                padding: 8px 8px 8px 40px;
             }
         }
     }

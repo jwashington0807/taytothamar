@@ -1,4 +1,4 @@
-$menuBreakPoint: 955px;
+$menuBreakPoint: 960px;
 
 .section.intro {
     min-height: 600px;
@@ -19,14 +19,18 @@ $menuBreakPoint: 955px;
 
 img.profilephoto {
     max-width: 100%;
-    max-height: 500px;
-    height: auto;
-    z-index: inherit;
+
+    @media (max-width: 650px) {
+        
+        
+    }
 }
 
 img.sectionwords {
     max-width: 100%;
-    max-height: 375px;
-    height: auto;
-    z-index: inherit;
+
+    @media (max-width: 650px) {
+        
+        max-width: 450px;
+    }
 }

@@ -4,41 +4,18 @@ $menuHeight: 50px;
 .sociallinks {
     position: absolute;
     display: block;
-    float: right;
     height: 40px;
-    width: max-content;
-    z-index: 888;
     bottom: 0;
     right: 0;
-    margin-right: 20px;
-
-    ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        list-style-type: none;
-    }
 
     @media (max-width: $menuBreakPoint) {
-
-        ul {
-            display: block;
-        }
-        
-        li {
-            display: block;
-        }
-
-        display: block;
-        width: 10px;
-        position: absolute;
-        top: 70px;
+        position: relative;
+        display: flex;
         flex-direction: row;
-        right: 0%;
-        z-index: 999;
-        height: 600px;
+        height: 150px;
+        width: 300px;
+        flex-wrap: wrap;
+        margin: 0 25px;
     }
 }
 
