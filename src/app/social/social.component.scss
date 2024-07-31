@@ -3,7 +3,8 @@ $menuHeight: 50px;
 
 .sociallinks {
     position: absolute;
-    display: block;
+    display: flex;
+    align-items: center;
     height: 40px;
     bottom: 0;
     right: 0;
@@ -19,9 +20,29 @@ $menuHeight: 50px;
     }
 }
 
-.social {
-    width: 45px;
-    height: 45px;
+img.social {
     text-decoration: none;
     padding: 10px 10px;
+    margin: 0;
+    object-fit: contain;
+}
+
+img.pinterest {
+    max-width: 38px;
+}
+
+img.facebook {
+    max-width: 38px;
+}
+
+img.twitter {
+    max-width: 40px;
+}
+
+img.instagram {
+    max-width: 45px;
+}
+
+img.youtube {
+    max-width: 45px;
 }

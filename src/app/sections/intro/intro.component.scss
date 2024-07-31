@@ -1,7 +1,7 @@
 $menuBreakPoint: 960px;
 
 .section.intro {
-    min-height: 600px;
+    height: 650px;
     position: relative;
 }
 
@@ -19,18 +19,24 @@ $menuBreakPoint: 960px;
 
 img.profilephoto {
     max-width: 100%;
+    min-width: 225px;
+    object-fit: contain;
 
     @media (max-width: 650px) {
         
-        
+        max-width: 350px;
+        padding: 0 10px;
     }
 }
 
 img.sectionwords {
     max-width: 100%;
+    min-width: 225px;
 
-    @media (max-width: 650px) {
+    @media (max-width: $menuBreakPoint) {
         
-        max-width: 450px;
+        max-width: 350px;
+        padding: 15px 0;
     }
+
 }

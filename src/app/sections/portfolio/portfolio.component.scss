@@ -1,15 +1,26 @@
+$menuBreakPoint: 960px;
+
 .section.portfolio {
-    min-height: 700px;
+    height: 700px;
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: $menuBreakPoint) {
+        height: 350px;
+        justify-content: center;
+    }
 }
 
 .sectionheader{
     display: flex;
     justify-content: center;
     padding-bottom: 15px;
+
+    @media (max-width: $menuBreakPoint) {
+        display: none;
+    }
 }
 
 .media-scroller {
@@ -23,10 +34,20 @@
     z-index: inherit;
     flex-grow: 2;
     align-items: center;
+
+    @media (max-width: $menuBreakPoint) {
+        
+        flex-grow: 0;
+    }
 }
 
 .media-element {
     padding: 10px 50px;
+
+    @media (max-width: $menuBreakPoint) {
+        
+        padding: 10px 25px;
+    }
 }
 
 .media-element > .videolink {
@@ -34,4 +55,10 @@
     height: 350px;
     width: 400px;
     object-fit: cover;
+
+    @media (max-width: $menuBreakPoint) {
+        
+        height: 225px;
+        width: 300px;
+    }
 }
