@@ -15,13 +15,13 @@
             <div class="menu">
                 <a class="menu-item" [class.is-open]="isMenuOpen" [routerLink]="'/'" (click)="toggleMenu()">Home</a>
                 <a class="menu-item" [class.is-open]="isMenuOpen" href="#portfolio" (click)="toggleMenu()">Portfolio</a>
-                <a class="menu-item" [class.is-open]="isMenuOpen" [routerLink]="'#references'" (click)="toggleMenu()">References</a>
-                <a class="menu-item" [class.is-open]="isMenuOpen" [routerLink]="'/urltoresumefile'" (click)="toggleMenu()">Resume</a>
+                <a class="menu-item" [class.is-open]="isMenuOpen" [routerLink]="'/references'" (click)="toggleMenu()">References</a>
+                <a class="menu-item" [class.is-open]="isMenuOpen" [routerLink]="'/resume'" (click)="toggleMenu()">Resume</a>
                 <a class="menu-item" [class.is-open]="isMenuOpen" [routerLink]="'contact'" (click)="toggleMenu()">Contact</a>
             </div>
 
-            <!-- Social Media links -->
-            <app-social></app-social>
+            <!-- Social Media links 
+            <app-social></app-social>-->
         </div>
     </nav>
 </div>

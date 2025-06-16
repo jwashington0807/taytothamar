@@ -1,11 +1,11 @@
 $menuBreakPoint: 960px;
 
 .section.portfolio {
-    height: 700px;
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
+    background-color: #000;
 
     @media (max-width: $menuBreakPoint) {
         height: 350px;
