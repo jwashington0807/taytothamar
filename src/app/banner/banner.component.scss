@@ -4,7 +4,7 @@ $menuHeight: 3rem;
 .banner {
     width: 100%;
     display: flex;
-    height: 150px;
+    height: 75px;
     position: relative;
 
     @media (max-width: $menuBreakPoint) {
@@ -12,13 +12,12 @@ $menuHeight: 3rem;
         top: 0;
         right: 0;
     }
-
 }
 
 // Logo
 .taylogo {
-    display: inline-block;
-    margin-left: 12px;
+    margin-left: 15px;
+    margin-top: 15px;
     color: #EB5656;
     max-width: 450px;
     width: 400px;
@@ -106,21 +105,14 @@ $menuHeight: 3rem;
         flex-direction: row;
         align-items: center;
         position: relative;
-        gap: 25px;
-
-        @media (max-width: 1200px) {
-            gap: 5px;
-        }
 
         @media (max-width: $menuBreakPoint) {
             display: flex;
             width: 300px;
             flex-direction: column;
-            gap: 0px;
         }
 
         .menu-item {
-            font-size: 1.7rem;
             display: inline-block;
             text-decoration: none;
             color: #EB5656;

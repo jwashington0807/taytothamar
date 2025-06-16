@@ -5,8 +5,6 @@ $menuHeight: 50px;
     position: absolute;
     display: flex;
     align-items: center;
-    height: 40px;
-    bottom: 0;
     right: 0;
 
     @media (max-width: $menuBreakPoint) {

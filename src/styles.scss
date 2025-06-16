@@ -7,15 +7,23 @@ $menuBreakPoint: 955px;
     src: url("/assets/css/FeelinTeachy-6RR4M.woff") format('woff');
 }
 
+:host {
+    height: 100%;
+}
+
+:host > * { display: block; }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 html, body {
     font-family: 'Saira Condensed', sans-serif;
     font-size: 1rem;
-    line-height: 1.5;
-    width: 100%;
     margin: 0;
 }
 
-html{
+html {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     scroll-behavior: smooth;
@@ -23,7 +31,7 @@ html{
 
 body {
     text-decoration: none; 
-    background-color: #313131;
+    background-color: #ECECEC;
     background-repeat: no-repeat;
 }
 
@@ -42,15 +50,6 @@ body {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
-:host {
-    height: 100%;
-}
-
-:host > * { display: block; }
-
-*, *:before, *:after {
-    box-sizing: inherit;
-}
 
 canvas, caption, center, cite, code, dd, del, dfn, div, dl, dt, em, embed, fieldset, font, form, h1, h2, h3, h4, h5, h6, hr, i, iframe, img, ins, kbd, label, legend, li, menu, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, u, ul, var {
     margin: 0;
@@ -67,10 +66,6 @@ a:visited {
     color: #FFF;
 }
 
-.clearfix {
-    clear:both;
-}
-
 .hidden {
     display: none;
 }
@@ -78,33 +73,6 @@ a:visited {
 .breakflex {
     flex-basis: 100%;
     height: 0;
-}
-
-// Triangles
-.backgroundtri {
-    position: absolute;
-    display: inline-block;
-    z-index: -999;
-    object-fit: cover;
-
-    @media (max-width: $menuBreakPoint) {
-        display: none;
-    }
-}
-
-.backgroundtri.trileft {
-    bottom: 0;
-    left: 0;
-}
-
-.backgroundtri.triright {
-    top: 0;
-    right: 0;
-}
-
-.backgroundtri.trileftalt {
-    top: 0;
-    left: 0;
 }
 
 // Section
