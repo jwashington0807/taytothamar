@@ -33,6 +33,7 @@ body {
     text-decoration: none; 
     background-color: #ECECEC;
     background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 .taytop {
@@ -134,4 +135,12 @@ a:visited {
 .taysimple {
     cursor: pointer;
     text-decoration: none;
+}
+
+.pdf-viewer {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    //width: 100%;
+    //min-height: 100%;
 }

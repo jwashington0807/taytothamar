@@ -7,8 +7,10 @@ import { FooterComponent } from './footer/footer.component';
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
-    imports: [BannerComponent, RouterOutlet, FooterComponent]
+    imports: [ BannerComponent, RouterOutlet, FooterComponent]
 })
 export class AppComponent {
   title = 'tay2thamar';
+
+  constructor() {}
 }

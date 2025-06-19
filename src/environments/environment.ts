@@ -1,4 +1,5 @@
 export const environment = {
-    resumeLink: '',
-    referencesLink: '/assets/files/Reference List For Tamar Smith.docx'
+    resumeLink: '/assets/files/Reference List For Tamar Smith..pdf',
+    referencesLink: '/assets/files/Reference List For Tamar Smith..pdf',
+    portfolioLink: '/assets/files/Production Portfolio For Tamar Smith.pdf'
 };
