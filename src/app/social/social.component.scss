@@ -6,15 +6,12 @@ $menuHeight: 50px;
     display: flex;
     align-items: center;
     right: 0;
+    flex-direction: column;
+    top: 0;
+    margin: 5px 5px;
 
     @media (max-width: $menuBreakPoint) {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        height: 150px;
-        width: 300px;
-        flex-wrap: wrap;
-        margin: 0 25px;
+        margin: 50px 0px;
     }
 }
 
