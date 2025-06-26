@@ -9,35 +9,26 @@ $menuHeight: 50px;
     flex-direction: column;
     top: 0;
     margin: 5px 5px;
+    z-index: 997;
 
     @media (max-width: $menuBreakPoint) {
-        margin: 50px 0px;
+        top: 200px;
     }
 }
 
 img.social {
     text-decoration: none;
-    padding: 10px 10px;
-    margin: 0;
-    object-fit: contain;
-}
-
-img.pinterest {
-    max-width: 38px;
+    margin: 10px 0;
 }
 
 img.facebook {
-    max-width: 38px;
-}
-
-img.twitter {
-    max-width: 40px;
+    max-width: 30px;
 }
 
 img.instagram {
-    max-width: 45px;
+    max-width: 33px;
 }
 
 img.youtube {
-    max-width: 45px;
+    max-width: 34px;
 }
