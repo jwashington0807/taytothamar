@@ -1,19 +1,15 @@
-.section.contact {
+.contact {
     position: relative;
+    background: none;
+    width: 100%;
     display: flex;
     justify-content: center;
-    margin: 0 auto;
-}
-
-img.comingsoon {
-    object-fit: none;
-    width: 90%;
+    height: 100vh;
 }
 
 .contactbox {
-    background-color: #FFF;
+    padding: 15px 5px;
     position: relative;
-    display: flex;
-    justify-content: center;
-    margin: 0 25px;
+    margin: 0 auto;
+    max-width: 600px;
 }

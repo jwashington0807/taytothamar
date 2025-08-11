@@ -33,7 +33,6 @@ body {
     text-decoration: none; 
     background-color: #555555;
     background-repeat: no-repeat;
-    min-height: 100vh;
     position: relative;
     font-family: 'feelinteachy';
 }
@@ -133,12 +132,4 @@ a:visited {
 .taysimple {
     cursor: pointer;
     text-decoration: none;
-}
-
-.pdf-viewer {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    //width: 100%;
-    //min-height: 100%;
 }
