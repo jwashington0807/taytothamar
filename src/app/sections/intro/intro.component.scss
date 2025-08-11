@@ -1,11 +1,12 @@
 $menuBreakPoint: 960px;
 
 .intro {
+    margin: 15px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
 
     @media (max-width: $menuBreakPoint) {
         
@@ -14,8 +15,7 @@ $menuBreakPoint: 960px;
 }
 
 img.profilephoto {
-    max-width: 100%;
-    min-width: 225px;
+    max-width: 400px;
     object-fit: contain;
 
     @media (max-width: 650px) {
@@ -29,10 +29,27 @@ img.sectionwords {
     max-width: 100%;
     min-width: 225px;
 
+
     @media (max-width: $menuBreakPoint) {
         
         max-width: 350px;
         padding: 15px 0;
     }
 
+}
+
+.introcontainer {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.sectiontitle {
+    color: #EB5656;
+    margin: 0 auto;
+}
+
+.sectionposition {
+    display: block;
+    color: #FFF;
 }

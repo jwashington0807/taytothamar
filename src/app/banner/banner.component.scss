@@ -6,11 +6,11 @@ $menuHeight: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #EB5656;
 }
 
 // Logo
 .taylogo {
-    color: #EB5656;
     max-width: 450px;
     width: 350px;
 }
@@ -24,8 +24,6 @@ $menuHeight: 3rem;
 
     position: relative;
     display: flex;
-    font-family: "copperplate";
-    font-weight: lighter;
     flex-grow: 2;
     justify-content: right;
     z-index: 998;
