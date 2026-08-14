@@ -6,10 +6,16 @@
     </div>
 
     <div class="media-scroller">
-      
-        <div class="media-element">
-            <iframe class="videolink" width="560" height="315" src="https://www.youtube.com/embed/xF7LvFjxxKY?si=23F0ZGPYmiOMyx6a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+
+        @for (item of media(); track item.url) {
+            <div class="media-element">
+                @if (item.kind === 'video') {
+                    <video class="videolink" width="560" height="315" [src]="item.url" controls></video>
+                } @else {
+                    <iframe class="videolink" width="560" height="315" [src]="item.url" title="Embedded video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                }
+            </div>
+        }
 
     </div>
 </div>

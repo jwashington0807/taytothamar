@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { environment } from '../../../environments/environment';
 import { ActivatedRoute } from '@angular/router';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-document',
@@ -10,37 +12,26 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './document.component.scss'
 })
 export class DocumentComponent {
-    pdfData?: any;
     currentPage = 1;
     totalPages = 1;
-    type: string | null = null;
 
-    constructor(private route: ActivatedRoute) {}
+    private readonly route = inject(ActivatedRoute);
 
-    ngOnInit(): void {
+    readonly type = toSignal(
+      this.route.queryParamMap.pipe(map(params => params.get('type'))),
+      { initialValue: null as string | null }
+    );
 
-      this.route.queryParamMap.subscribe(params => {
-      this.type = params.get('type');
-
-      if(this.type != null){
-        switch (this.type) {
-          case 'portfolio':
-              this.pdfData = environment.portfolioLink;
-            break;
-          case 'resume':
-              this.pdfData = environment.resumeLink;
-            break;
-          case 'references':
-              this.pdfData = environment.referencesLink;
-            break;
-          default:
-            console.log("invalid string value");
-        }
-      }
-      else
-      {
-        // We have a problem
+    readonly pdfData = computed(() => {
+      switch (this.type()) {
+        case 'portfolio':
+          return environment.portfolioLink;
+        case 'resume':
+          return environment.resumeLink;
+        case 'references':
+          return environment.referencesLink;
+        default:
+          return undefined;
       }
     });
-  }
 }

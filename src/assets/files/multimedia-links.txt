@@ -1,0 +1,5 @@
+# One link per line. Blank lines and lines starting with # are ignored.
+# Supported: YouTube (watch or youtu.be links), Vimeo share links,
+# already-formed embed URLs, and direct video files (.mp4, .webm, .mov, etc).
+https://www.youtube.com/watch?v=xF7LvFjxxKY
+https://youtu.be/OlGSW-LFw9I?is=Qq50a6ePb1H07Nzw

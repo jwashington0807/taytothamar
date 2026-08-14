@@ -4,12 +4,88 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 100vh;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 15px 15px 40px;
+    box-sizing: border-box;
 }
 
 .contactbox {
-    padding: 15px 5px;
-    position: relative;
-    margin: 0 auto;
-    max-width: 600px;
+    background-color: #FFF;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    padding: 45px 40px;
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.contacttitle {
+    font-family: 'feelinteachy';
+    font-size: 2.25rem;
+    color: #2b2b2b;
+    display: inline-block;
+    margin: 0 0 20px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #F4E100;
+}
+
+.contactbody {
+    font-family: 'calibri', Times, serif;
+    font-size: 1rem;
+    font-weight: lighter;
+    color: #333;
+    line-height: 1.5;
+    margin: 0 0 30px;
+}
+
+.emailbutton {
+    display: inline-block;
+    background-color: #F4E100;
+    color: #000;
+    font-family: 'calibri', Times, serif;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 32px;
+    border-radius: 30px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+
+    &:visited {
+        color: #000;
+    }
+
+    &:hover {
+        background-color: #c2b800;
+        transform: translateY(-2px);
+    }
+}
+
+.signature {
+    font-family: 'calibri', Times, serif;
+    font-weight: lighter;
+    font-size: 0.9rem;
+    color: #555;
+    margin: 30px 0 0;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 500px) {
+    .contactbox {
+        padding: 35px 25px;
+    }
+
+    .contacttitle {
+        font-size: 1.75rem;
+    }
 }
